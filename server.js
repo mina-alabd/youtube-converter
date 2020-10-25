@@ -122,7 +122,6 @@ app.get("/downloadmp3", (req, res) => {
   //console.log(data.player_response.videoDetails.title);
   res.header({
     "Content-Disposition": 'attachment; filename="download.mp3"',
-    "Content-length": size,
   });
   ytdl(url, {
     format: "mp3",
