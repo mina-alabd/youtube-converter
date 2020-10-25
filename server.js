@@ -116,7 +116,6 @@ app.get("/getaudio", (req, res) => {
 app.get("/downloadmp3", (req, res) => {
   let url = req.query.url;
   let itag = req.query.itag;
-  let size = req.query.size;
   if (!ytdl.validateURL(url)) {
     return res.sendStatus(400);
   }
